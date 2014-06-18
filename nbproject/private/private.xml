@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/sportschanbara/src/Ktap/UserBundle/Resources/views/Registration/register.html.twig</file>
+            <file>file:/D:/sportschanbara/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Controller/RegistrationController.php</file>
+            <file>file:/D:/sportschanbara/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/User.php</file>
+            <file>file:/D:/sportschanbara/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Command/PromoteUserCommand.php</file>
+            <file>file:/D:/sportschanbara/src/Ktap/BackendBundle/Resources/config/routing.yml</file>
+            <file>file:/D:/sportschanbara/src/Ktap/UserBundle/Resources/views/Security/login.html.twig</file>
+            <file>file:/D:/sportschanbara/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Command/DemoteUserCommand.php</file>
+            <file>file:/D:/sportschanbara/web/bundles/ktapfrontend/css/dashboard.css</file>
+            <file>file:/D:/sportschanbara/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Command/ActivateUserCommand.php</file>
+            <file>file:/D:/sportschanbara/src/Ktap/UserBundle/Resources/views/layout.html.twig</file>
+            <file>file:/D:/sportschanbara/src/Ktap/BackendBundle/Controller/DefaultController.php</file>
+            <file>file:/D:/sportschanbara/src/Ktap/UserBundle/Entity/User.php</file>
+        </group>
+    </open-files>
+</project-private>

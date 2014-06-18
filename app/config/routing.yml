@@ -1,0 +1,12 @@
+ktap_frontend:
+    resource: "@KtapFrontendBundle/Resources/config/routing.yml"
+    prefix:   /
+
+ktap_backend:
+    resource: "@KtapBackendBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+_user_bundle:
+    resource: "@UserBundle/Resources/config/routing.yml"
+ 
+

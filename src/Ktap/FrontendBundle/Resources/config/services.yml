@@ -1,0 +1,7 @@
+parameters:
+#    ktap_frontend.example.class: Ktap\FrontendBundle\Example
+
+services:
+#    ktap_frontend.example:
+#        class: %ktap_frontend.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

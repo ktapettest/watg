@@ -1,0 +1,31 @@
+_index:
+    pattern:  /
+    defaults: { _controller: KtapFrontendBundle:Default:index }
+    
+_evenimente:
+    pattern:  /evenimente
+    defaults: { _controller: KtapFrontendBundle:Default:evenimente } 
+    
+_regulamente:
+    pattern:  /regulamente
+    defaults: { _controller: KtapFrontendBundle:Default:regulamente }     
+    
+_afilieri:
+    pattern:  /afilieri
+    defaults: { _controller: KtapFrontendBundle:Default:afilieri }    
+    
+_contact:
+    pattern:  /contact
+    defaults: { _controller: KtapFrontendBundle:Default:contact }  
+    
+_membri:
+    pattern:  /membri
+    defaults: { _controller: KtapFrontendBundle:Default:membri }    
+    
+_imagini:
+    pattern:  /imagini
+    defaults: { _controller: KtapFrontendBundle:Default:imagini }   
+    
+_echipamente:
+    pattern:  /echipamente
+    defaults: { _controller: KtapFrontendBundle:Default:echipamente }       

@@ -1,0 +1,7 @@
+backadmin:
+    pattern:  /backadmin
+    defaults: { _controller: KtapBackendBundle:Default:index }	
+promote-user:
+    pattern:  /backadmin/promote-user
+    defaults: { _controller: KtapBackendBundle:Default:promoteUser }    
+

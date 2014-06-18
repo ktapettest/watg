@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Ktap">   
+    <link rel="icon"  href="{{ asset('favicon.ico') }}" />
+
+    <title>Sportschanbara {% block title %}Acasa{% endblock %}</title>
+    
+    {% block styles %}
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="{{ asset('bundles/ktapfrontend/css/bootstrap.min.css') }}" />
+	<!-- Custom styles for this template -->
+        <link href="{{ asset('bundles/ktapfrontend/css/dashboard.css') }}" rel="stylesheet">
+    {% endblock %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>         
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        {% block header %}   
+        <div class="container-fluid">
+            {% block header_left %}
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <h1>                    
+                    <a class="navbar-brand" href="{{ path('_index') }}">
+                        <img alt="sportchanbara sigla" src="{{ asset('img/Sigla-Sportschanbara.png') }}" />
+                        Sportschanbara
+                    </a>
+                </h1>
+            </div>
+            {% endblock %}
+            {% block menu %}
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ path('_index') }}">Acasa</a></li>
+                <li><a href="#">Despre</a></li>
+                {# check if uer is authenticated #}
+                {% if app.user %}
+                    <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                    <li><a href="{{ path('fos_user_profile_show') }}">View Account Details</a></li>
+                    <li><a href="{{ path('fos_user_profile_edit') }}">Edit Account</a></li>
+                    <li><a href="{{ path('fos_user_change_password') }}">Change Password</a></li>
+                {% elseif not app.user %}
+                    <li><a href="{{ path('fos_user_security_login') }}">Login</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}">Create Account</a></li>
+                    <li><a href="{{ path('fos_user_registration_register') }}">Forgot Password</a></li>
+                {% endif %}                
+              </ul>
+              <form class="navbar-form navbar-right">
+                <input type="text" class="form-control" placeholder="Search...">
+              </form>
+            </div>
+            {% endblock %}
+        </div>
+        {% endblock %}
+    </div>  
+    
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-1 sidebar">
+         {% block sidebar %}
+          <ul class="nav nav-sidebar">
+            <li class="{% if app.request.attributes.get('_route') == '_evenimente' %}active{% endif %}"><a href="{{ path('_evenimente') }}">Evenimente</a></li>
+            <li class="{% if app.request.attributes.get('_route') == '_regulamente' %}active{% endif %}"><a href="{{ path('_regulamente') }}">Regulamente</a></li>
+            <li class="{% if app.request.attributes.get('_route') == '_echipamente' %}active{% endif %}"><a href="{{ path('_echipamente') }}">Echipamente</a></li>
+            <li class="{% if app.request.attributes.get('_route') == '_afilieri' %}active{% endif %}"><a href="{{ path('_afilieri') }}">Afilieri</a></li>
+            <li class="{% if app.request.attributes.get('_route') == '_membri' %}active{% endif %}"><a href="{{ path('_membri') }}">Membri</a></li>
+            <li class="{% if app.request.attributes.get('_route') == '_contact' %}active{% endif %}"><a href="{{ path('_contact') }}">Contact</a></li>
+            <li class="{% if app.request.attributes.get('_route') == '_imagini' %}active{% endif %}"><a href="{{ path('_imagini') }}">Imagini</a></li>
+          </ul>
+           {% endblock %}
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-11 col-md-offset-1 main">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->    
+    {% block javascript %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('bundles/ktapfrontend/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/ktapfrontend/js/frontend.js') }}"></script>
+
+    {% endblock %}    
+  </body>
+</html>
